@@ -60,9 +60,9 @@ PMon是为了持续监控网络端口而设计，主要适用外网边界端口�
 
 如有建议、指导，欢迎关注公众号`安小记`，或加微信，期待和各位大佬交流；
 
-![AnSecNote](https://github.com/chiww/PMon/tree/master/pic/AnSecNote.jpg)
+![AnSecNote](https://raw.githubusercontent.com/chiww/PMon/master/pic/AnSecNote.jpg)
 
 另外，为了更方便交流，新建了该项目的微信群，欢迎各位扫描加入：
 
-![Wechat_PMon](https://github.com/chiww/PMon/tree/master/pic/Wechat_PMon.JPG)
+<img src="https://raw.githubusercontent.com/chiww/PMon/master/pic/Wechat_PMon.JPG" width = "258" height="343" alt="Wechat" />
 
