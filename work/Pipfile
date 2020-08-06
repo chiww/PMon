@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.douban.com/simple"
+#url = "https://mirrors.aliyun.com/pypi/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+python-dotenv = {index = "https://pypi.douban.com",version = "*"}
+requests = "*"
+python-libnmap = "*"
+ipaddress = "*"
+celery = "*"
+gunicorn = "==19.7.1"
+lxml = "*"
+redis = "*"
+flower = "*"
+
+[requires]
+python_version = "3"

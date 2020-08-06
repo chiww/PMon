@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+#url = "https://pypi.org/simple"
+url = "https://mirrors.aliyun.com/pypi/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+python-dotenv = {index = "https://pypi.douban.com",version = "*"}
+requests = "*"
+ipaddress = "*"
+flask = "*"
+flask-restful = "*"
+celery = "*"
+redis = "*"
+pymongo = "*"
+flask-pymongo = "*"
+flask-apscheduler = "*"
+gunicorn = "==19.7.1"
+
+[requires]
+python_version = "3"
