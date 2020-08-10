@@ -11,10 +11,20 @@ PMon 前端框架
 1. `dist`目录是已经编译好的文件，如果前端不需要改动的，可以直接使用。如果修改了前端页面，请重新编译；
 2. 框架文档参考`vue-element-admin`，本项目仅在此基础搭建具体应用；
 
+## 安装nodejs运行环境
 
+```bash
+# 增加源
+curl -sL https://rpm.nodesource.com/setup_14.x | bash -
+
+#安装环境
+yum install -y nodejs
+
+#配置镜像源加速下载
+npm config set registry http://registry.npm.taobao.org
+```
 
 ## Build Setup
-
 
 ```bash
 # clone the project
