@@ -60,7 +60,7 @@ PMon - Work
     git clone https://github.com/robertdavidgraham/masscan.git
     cd masscan
     make
-    cp ./bin/masscan /YOU/DEPLOY/PATH/PMon/work/bin/
+    cp ./bin/masscan /YOU/DEPLOY/PATH/PMon/work/work/bin/
     ```
 8. 安装nmap
     ```shell script
