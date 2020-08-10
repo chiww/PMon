@@ -19,7 +19,7 @@ from .task import Task
 from celery.utils.log import get_task_logger
 
 basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-MASSCAN_EXE_PATH = basedir + "/work/bin/masscan"
+MASSCAN_EXE_PATH = basedir + "/bin/masscan"
 
 
 logger = get_task_logger("work")
