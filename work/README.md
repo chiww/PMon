@@ -39,16 +39,19 @@ PMon - Work
     ```
 4. 安装redis，并启动
     ```shell script
-    yum install redis-server
+    yum install epel-release
+    yum install redis
     service redis start
     ```
 5. celery分布式任务
     ```shell script
-    celery -A work.celery worker -l INFO -P threads -E 
+    celery -A work.celery worker -l INFO -P threads -E
+    #后续可由supervisor后台运行
     ```
 6. celery flower 监控
     ```shell script
     celery -A work.celery flower --port=5555
+    #后续可由supervisor后台运行
     ```
 
 7. 编译安装masscan
@@ -57,7 +60,7 @@ PMon - Work
     git clone https://github.com/robertdavidgraham/masscan.git
     cd masscan
     make
-    cp ./bin/masscan /YOU/DEPLOY/PATH/PMon/work/bin
+    cp ./bin/masscan /YOU/DEPLOY/PATH/PMon/work/bin/
     ```
 8. 安装nmap
     ```shell script
@@ -68,6 +71,7 @@ PMon - Work
     ```shell script
     pip3 install supervisor
     echo_supervisord_conf > /etc/supervisord.conf
+    #如在Server安装时已执行echo_supervisord_conf命令，不要重复执行！
     ```
 
     supervisord.conf配置参考：
@@ -78,7 +82,7 @@ command=pipenv run celery -A work.celery worker -l INFO -P threads -E           
 numprocs=1                    ; number of processes copies to start (def 1)
 directory=/YOU/DEPLOY/PATH/PMon/work                ; directory to cwd to before exec (def no cwd)
 ;umask=022                     ; umask for process (default None)
-;priority=999                  ; the relative start priority (default 999)
+priority=100                  ; the relative start priority (default 999)
 autostart=true                ; start at supervisord start (default: true)
 ;startsecs=1                   ; # of secs prog must stay up to be running (def. 1)
 ;startretries=3                ; max # of serial start failures when starting (default 3)
@@ -111,7 +115,7 @@ command=pipenv run celery -A work.celery flower --port=5555              ; the p
 numprocs=1                    ; number of processes copies to start (def 1)
 directory=/YOU/DEPLOY/PATH/PMon/work                  ; directory to cwd to before exec (def no cwd)
 ;umask=022                     ; umask for process (default None)
-;priority=999                  ; the relative start priority (default 999)
+priority=200                  ; the relative start priority (default 999)
 autostart=true                ; start at supervisord start (default: true)
 ;startsecs=1                   ; # of secs prog must stay up to be running (def. 1)
 ;startretries=3                ; max # of serial start failures when starting (default 3)
