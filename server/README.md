@@ -36,7 +36,7 @@ MONGODB_DATABASE="PMon"
 #### python 依赖
 安装全局的管理依赖:
 ```shell script
-#pip3 install supervisord pipenv gunicorn
+#pip3 install supervisor pipenv gunicorn
 ```
 使用pipenv管理python组件依赖
 ```shell script
@@ -72,7 +72,7 @@ pipenv install
 
 1. 配置supervisord进程守护:
 ```shell script
-echo-supervisord-conf >> /etc/supervisord.conf
+echo_supervisord_conf >> /etc/supervisord.conf
 vim /etc/supervisord.conf
 ```
 将以下配置写入配置文件：

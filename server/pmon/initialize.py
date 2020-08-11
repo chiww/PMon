@@ -181,7 +181,7 @@ if __name__ == '__main__':
         
     mongodb_uri = sys.argv[1]
     client = MongoClient(mongodb_uri)
-    database = client['pmon']
+    database = client['PMon']
 
     init_settings()
     init_schedule()
