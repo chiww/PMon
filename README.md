@@ -66,3 +66,7 @@ PMon是为了持续监控网络端口而设计，主要适用外网边界端口�
 
 <img src="https://raw.githubusercontent.com/chiww/PMon/master/pic/Wechat_PMon.JPG" width = "258" height="343" alt="Wechat" />
 
+
+## 6. 鸣谢
+
+2020.08.11 感谢 [yolylight](https://github.com/yolylight) 完善部署文档和修改小BUG；
